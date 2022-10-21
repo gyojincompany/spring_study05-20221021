@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="stu1" class="com.gyojincompany.test.Student">
+		<property name="name">
+			<value>홍길동</value>
+		</property>
+		<property name="age">
+			<value>30살</value>
+		</property>
+		<property name="gradeNum">
+			<value>3학년</value>
+		</property>
+		<property name="classNum">
+			<value>3반</value>
+		</property>	
+	</bean>
+	
+	<bean id="stu2" class="com.gyojincompany.test.Student">
+		<constructor-arg>
+			<value>김유신</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>27살</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>2학년</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>8반</value>
+		</constructor-arg>		
+	</bean>
+	
+	<bean id="studentInfo1" class="com.gyojincompany.test.StudentInfo">
+		<constructor-arg>
+			<ref bean="stu1"></ref>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="studentInfo2" class="com.gyojincompany.test.StudentInfo">
+		<constructor-arg>
+			<ref bean="stu2"></ref>
+		</constructor-arg>
+	</bean>
+	
+
+</beans>
